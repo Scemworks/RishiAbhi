@@ -20,7 +20,12 @@
     <nav class="navbar">
         <a href="#" class="brand-logo">Rishinandan's Love Story</a>
         <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">Switch to Dark Theme</button>
-        <ul class="navigation-menu">
+        <div class="hamburger" id="hamburger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="navigation-menu" id="nav-menu">
             <li><a href="help.html">Help</a></li>
         </ul>
     </nav>
@@ -40,19 +45,5 @@
         <p>&copy; 2024 Rishinandan's Love Story</p>
     </footer>
     <script src="script.js"></script>
-    <script>
-        function toggleTheme() {
-            const body = document.body;
-            const themeToggleButton = document.getElementById("theme-toggle");
-            body.classList.toggle("dark-theme");
-            body.classList.toggle("light-theme");
-            // Update button text based on current theme
-            if (body.classList.contains("dark-theme")) {
-                themeToggleButton.textContent = "Switch to Light Theme";
-            } else {
-                themeToggleButton.textContent = "Switch to Dark Theme";
-            }
-        }
-    </script>
 </body>
 </html>

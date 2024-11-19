@@ -153,11 +153,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Theme toggle functionality
-    themeToggle.addEventListener("click", () => {
-        document.body.classList.toggle("dark-theme");
-        document.querySelector(".chat-interface").classList.toggle("dark-theme");
-        document.querySelector(".chat-header").classList.toggle("dark-theme");
-    });
+    themeToggle.addEventListener("click", toggleTheme);
 
     // Hamburger menu functionality
     hamburgerMenu.addEventListener("click", () => {
@@ -172,4 +168,25 @@ document.addEventListener("DOMContentLoaded", function() {
             button.style.width = isMobile ? "100%" : "auto"; // Make buttons full-width on mobile
         });
     });
+});
+
+function toggleTheme() {
+    const body = document.body;
+    const themeToggleButton = document.getElementById("theme-toggle");
+    body.classList.toggle("dark-theme");
+    body.classList.toggle("light-theme");
+    // Update button text based on current theme
+    if (body.classList.contains("dark-theme")) {
+        themeToggleButton.textContent = "Switch to Light Theme";
+    } else {
+        themeToggleButton.textContent = "Switch to Dark Theme";
+    }
+}
+
+// Hamburger menu functionality
+const hamburgerMenu = document.getElementById("hamburger-menu");
+const navMenu = document.getElementById("nav-menu");
+
+hamburgerMenu.addEventListener("click", () => {
+    navMenu.classList.toggle("open"); // Toggle the visibility of the navigation menu
 });

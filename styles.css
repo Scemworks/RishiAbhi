@@ -81,33 +81,12 @@ body.dark-theme {
         width: 100%;
     }
 
-    .navigation-menu.active {
+    .navigation-menu.open {
         display: flex; /* Show menu when active */
     }
 
     .hamburger {
         display: flex; /* Show hamburger icon */
-    }
-
-    .chat-interface {
-        width: 95%;
-        height: auto;
-    }
-
-    .chat-header {
-        font-size: 1.2em;
-    }
-
-    .message {
-        font-size: 0.9em;
-    }
-
-    #message-input {
-        font-size: 0.9em;
-    }
-
-    #send-button {
-        font-size: 0.9em;
     }
 }
 

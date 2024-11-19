@@ -20,7 +20,7 @@ body.dark-theme {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative; /* Added for positioning the hamburger menu */
+    position: relative;
 }
 
 .brand-logo {
@@ -94,7 +94,7 @@ body.dark-theme {
     width: 90%;
     max-width: 700px;
     margin: 20px auto;
-    background: #ffffff; /* Changed to hex for consistency */
+    background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     display: flex;

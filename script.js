@@ -156,4 +156,13 @@ document.addEventListener("DOMContentLoaded", function() {
         document.querySelector(".chat-interface").classList.toggle("dark-theme");
         document.querySelector(".chat-header").classList.toggle("dark-theme");
     });
+
+    // Responsive adjustments
+    window.addEventListener("resize", () => {
+        const isMobile = window.innerWidth < 768; // Check if the viewport is mobile size
+        const suggestionButtons = document.querySelectorAll(".suggestion-button");
+        suggestionButtons.forEach(button => {
+            button.style.width = isMobile ? "100%" : "auto"; // Make buttons full-width on mobile
+        });
+    });
 });

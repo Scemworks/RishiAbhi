@@ -188,3 +188,38 @@ body.dark-theme .ai {
 
 body.dark-theme .message.user-message {
     color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navigation-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .chat-interface {
+        width: 95%;
+        height: auto;
+    }
+
+    .chat-header {
+        font-size: 1.2em;
+    }
+
+    .message {
+        font-size: 0.9em;
+    }
+
+    #message-input {
+        font-size: 0.9em;
+    }
+
+    #send-button {
+        font-size: 0.9em;
+    }
+}

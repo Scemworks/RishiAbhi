@@ -3,25 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Help</title>
+    <title>Rishinandan's Love Story</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body.light-theme {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        body.dark-theme {
+            background-color: #333333;
+            color: #ffffff;
+        }
+    </style>
 </head>
 <body class="light-theme">
-    <header>
-        <h1>Help Center</h1>
-        <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">Switch to Dark Theme</button>
+    <nav class="navbar">
+        <a href="#" class="brand-logo">Rishinandan's Love Story</a>
+        <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">Switch to Dark Theme</button>
         <div class="hamburger" id="hamburger-menu">
             <div></div>
             <div></div>
             <div></div>
         </div>
-        <nav class="navbar" id="nav-menu">
-            <ul class="navigation-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-        </nav>
+        <ul class="navigation-menu" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#how-it-works">Working</a></li>
+        <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
     </header>
     <main>
         <section id="how-it-works">
@@ -45,5 +54,6 @@
     <footer>
         <p>&copy; 2024 Rishinandan's Love Story</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -20,6 +20,7 @@ body.dark-theme {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative; /* Added for positioning the hamburger menu */
 }
 
 .brand-logo {
@@ -49,6 +50,65 @@ body.dark-theme {
 
 .navigation-menu a:hover {
     background-color: rgba(97, 218, 251, 0.2);
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #e0e0e0;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Show hamburger menu on mobile */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navigation-menu {
+        display: none; /* Hide menu by default on mobile */
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .navigation-menu.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon */
+    }
+
+    .chat-interface {
+        width: 95%;
+        height: auto;
+    }
+
+    .chat-header {
+        font-size: 1.2em;
+    }
+
+    .message {
+        font-size: 0.9em;
+    }
+
+    #message-input {
+        font-size: 0.9em;
+    }
+
+    #send-button {
+        font-size: 0.9em;
+    }
 }
 
 .chat-interface {
@@ -188,38 +248,4 @@ body.dark-theme .ai {
 
 body.dark-theme .message.user-message {
     color: white;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navigation-menu {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .chat-interface {
-        width: 95%;
-        height: auto;
-    }
-
-    .chat-header {
-        font-size: 1.2em;
-    }
-
-    .message {
-        font-size: 0.9em;
-    }
-
-    #message-input {
-        font-size: 0.9em;
-    }
-
-    #send-button {
-        font-size: 0.9em;
-    }
 }

@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const messageInput = document.getElementById("message-input");
     const sendButton = document.getElementById("send-button");
     const themeToggle = document.getElementById("theme-toggle");
+    const hamburgerMenu = document.getElementById("hamburger-menu");
+    const navMenu = document.getElementById("nav-menu");
 
     // Predefined love questions and their responses about Rishi and Abhinav
     const suggestions = [
@@ -155,6 +157,11 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.classList.toggle("dark-theme");
         document.querySelector(".chat-interface").classList.toggle("dark-theme");
         document.querySelector(".chat-header").classList.toggle("dark-theme");
+    });
+
+    // Hamburger menu functionality
+    hamburgerMenu.addEventListener("click", () => {
+        navMenu.classList.toggle("open"); // Toggle the visibility of the navigation menu
     });
 
     // Responsive adjustments

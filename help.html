@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - Your Website Name</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        body.light-theme {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        body.dark-theme {
+            background-color: #333333;
+            color: #ffffff;
+        }
+        .theme-toggle {
+            cursor: pointer;
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body class="light-theme">
+    <header>
+        <h1>Help Center</h1>
+        <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">Switch to Dark Theme</button>
+        <nav>
+            <ul>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="how-it-works">
+            <h2>How It Works</h2>
+            <p>Our website tells the beautiful love story of Rishinandan and Abhinav. Here’s how their journey unfolds:</p>
+            <ol>
+                <li><strong>Meeting:</strong> Rishinandan and Abhinav first met at a mutual friend's party, where they instantly connected over their shared interests.</li>
+                <li><strong>Friendship:</strong> Their friendship blossomed as they spent more time together, exploring the city and enjoying each other's company.</li>
+                <li><strong>Realization:</strong> As their bond deepened, both realized they had developed feelings for each other, leading to heartfelt conversations about their emotions.</li>
+                <li><strong>Commitment:</strong> They decided to take their relationship to the next level, promising to support and cherish each other through thick and thin.</li>
+                <li><strong>Journey Together:</strong> Rishinandan and Abhinav embarked on a journey filled with love, laughter, and shared dreams, inspiring others with their story.</li>
+            </ol>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any further questions about the love story, feel free to contact the actual person for the complete love story <a href="mailto:rishinandan2007@gmail.com">rishinandan2007@gmail.com</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Rishinandan's Love Story</p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const themeToggleButton = document.getElementById("theme-toggle");
+            body.classList.toggle("dark-theme");
+            body.classList.toggle("light-theme");
+            // Update button text based on current theme
+            if (body.classList.contains("dark-theme")) {
+                themeToggleButton.textContent = "Switch to Light Theme";
+            } else {
+                themeToggleButton.textContent = "Switch to Dark Theme";
+            }
+        }
+    </script>
+</body>
+</html>

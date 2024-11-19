@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishinandan's Love Story</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body.light-theme {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        body.dark-theme {
+            background-color: #333333;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="light-theme">
+    <nav class="navbar">
+        <a href="#" class="brand-logo">Rishinandan's Love Story</a>
+        <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">Switch to Dark Theme</button>
+        <ul class="navigation-menu">
+            <li><a href="help.html">Help</a></li>
+        </ul>
+    </nav>
+    <div class="chat-interface">
+        <div class="chat-header">
+            <h1>Rishinandan's Love Story</h1>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <!-- Messages will be added here dynamically -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="message-input" placeholder="Type your message here...">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Rishinandan's Love Story</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const themeToggleButton = document.getElementById("theme-toggle");
+            body.classList.toggle("dark-theme");
+            body.classList.toggle("light-theme");
+            // Update button text based on current theme
+            if (body.classList.contains("dark-theme")) {
+                themeToggleButton.textContent = "Switch to Light Theme";
+            } else {
+                themeToggleButton.textContent = "Switch to Dark Theme";
+            }
+        }
+    </script>
+</body>
+</html>

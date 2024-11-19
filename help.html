@@ -19,19 +19,18 @@
 <body class="light-theme">
     <nav class="navbar">
         <a href="#" class="brand-logo">Rishinandan's Love Story</a>
-        <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">Switch to Dark Theme</button>
+        <button id="theme-toggle" class="theme-toggle">Switch to Dark Theme</button>
         <div class="hamburger" id="hamburger-menu">
             <div></div>
             <div></div>
             <div></div>
         </div>
         <ul class="navigation-menu" id="nav-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#how-it-works">Working</a></li>
-        <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#how-it-works">Working</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    </header>
     <main>
         <section id="how-it-works">
             <h2>How It Works</h2>
@@ -55,5 +54,22 @@
         <p>&copy; 2024 Rishinandan's Love Story</p>
     </footer>
     <script src="script.js"></script>
+    <script>
+        // Theme toggle functionality
+        function toggletheme() {
+            const body = document.body;
+            body.classList.toggle("dark-theme");
+            body.classList.toggle("light-theme");
+            // Update button text based on current theme
+            document.getElementById("theme-toggle").textContent = body.classList.contains("dark-theme") ? "Switch to Light Theme" : "Switch to Dark Theme";
+        }
+
+        document.getElementById("theme-toggle").addEventListener("click", toggletheme);
+
+        // Hamburger menu functionality
+        document.getElementById("hamburger-menu").addEventListener("click", function() {
+            document.getElementById("nav-menu").classList.toggle("open");
+        });
+    </script>
 </body>
 </html>

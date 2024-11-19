@@ -153,19 +153,13 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Theme toggle functionality
-    function toggleTheme() {
+    themeToggle.addEventListener("click", function() {
         const body = document.body;
         body.classList.toggle("dark-theme");
         body.classList.toggle("light-theme");
         // Update button text based on current theme
-        if (body.classList.contains("dark-theme")) {
-            themeToggle.textContent = "Switch to Light Theme";
-        } else {
-            themeToggle.textContent = "Switch to Dark Theme";
-        }
-    }
-
-    themeToggle.addEventListener("click", toggleTheme);
+        themeToggle.textContent = body.classList.contains("dark-theme") ? "Switch to Light Theme" : "Switch to Dark Theme";
+    });
 
     // Hamburger menu functionality
     hamburgerMenu.addEventListener("click", () => {
